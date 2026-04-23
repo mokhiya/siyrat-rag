@@ -1,23 +1,59 @@
-# Siyrat RAG — Retrieval-Augmented Generation for Islamic Biography
+# Siyrat RAG
 
-A production-ready RAG (Retrieval-Augmented Generation) system for answering questions about the life of Prophet Muhammad ﷺ, built on Uzbek Islamic source texts. The system uses hybrid search, query expansion, and an LLM-as-judge evaluation pipeline.
+A Retrieval-Augmented Generation (RAG) system for answering questions about the life of Prophet Muhammad ﷺ, built on Uzbek-language Islamic source texts.
 
----
-
-## Demo
-
-![Pipeline V2](assets/pipeline_v2.png)
+The system retrieves relevant passages from digitized books using hybrid search (BM25 + dense embeddings), expands queries using an LLM, and generates grounded answers with source attribution. A built-in benchmark evaluates three LLMs using an LLM-as-judge pipeline.
 
 ---
 
-## Features
+## Pipeline
 
-- **Hybrid search** — BM25 keyword matching + dense embedding search, fused with Reciprocal Rank Fusion (RRF)
-- **Query expansion** — LLM generates 3 additional search queries from the original question to improve recall
-- **Source attribution** — every answer cites which book it was drawn from
-- **LLM-as-judge benchmark** — 18 questions × 3 models, scored on faithfulness, accuracy, and completeness
-- **Interactive Streamlit dashboard** — Chat, Pipeline diagrams, Embedding space (t-SNE), Retrieval explorer, Benchmark results
-- **Docker support** — single `docker-compose up` to run
+### V1 — Dense Embedding Search
+```
+PDF → Loader → Cleaner → Chunker → Embedder → ChromaDB
+                                                    ↓
+Query ──────────────────────────── Embed → Top-5 Chunks → Groq LLM → Answer
+```
+
+### V2 — Hybrid Search + Query Expansion (current)
+```
+PDF → Loader → OCR Cleaner → Chunker (150w) → Embedder (passage:) → ChromaDB ──┐
+                                                                                  ↓
+                                                                      Hybrid Search (RRF)
+                                                                                  ↑
+                                                              BM25 Index ─────────┘
+
+Query → Query Expansion (LLM, ×3) → Hybrid Search → Top-20 Chunks → Groq LLM → Answer + Source
+```
+
+![V2 Pipeline](assets/pipeline_v2.png)
+
+---
+
+## Embedding Space
+
+Chunks visualized with t-SNE — 2041 OCR-cleaned chunks, `intfloat/multilingual-e5-base`.
+
+| V1 | V2 |
+|---|---|
+| ![t-SNE V1](assets/tsne_v1.png) | ![t-SNE V2](assets/tsne_v2.png) |
+
+---
+
+## Benchmark Results
+
+18 questions × 3 models, scored by an LLM judge on three criteria (1–5 each):
+- **Faithfulness** — does the answer stay within the retrieved context?
+- **Accuracy** — are the facts correct?
+- **Completeness** — does the answer fully address the question?
+
+| Model | Overall | Easy | Medium | Hard |
+|---|---|---|---|---|
+| **Llama 3.1 8B Instant** | **3.80** | 4.33 | 3.72 | 3.33 |
+| Llama 4 Scout 17B | 3.74 | **4.39** | 3.67 | 3.17 |
+| Qwen3 32B | 2.28 | 1.00 | **3.45** | 2.39 |
+
+> Qwen3-32B scored low on easy questions because it consistently added information from its training data rather than restricting itself to the retrieved context. Llama models were more faithful to the source material.
 
 ---
 
@@ -25,172 +61,223 @@ A production-ready RAG (Retrieval-Augmented Generation) system for answering que
 
 | Component | Technology |
 |---|---|
-| Embedding model | `intfloat/multilingual-e5-base` |
-| Vector database | ChromaDB (cosine similarity) |
-| Keyword search | BM25 (`rank-bm25`) |
-| LLM inference | Groq API (Llama, Qwen) |
-| Frontend | Streamlit |
-| Containerization | Docker |
+| Embedding model | `intfloat/multilingual-e5-base` (768-dim, multilingual) |
+| Vector store | ChromaDB (cosine similarity, HNSW index) |
+| Keyword search | BM25 via `rank-bm25` |
+| Result fusion | Reciprocal Rank Fusion (RRF, k=60) |
+| Query expansion | Groq LLM (3 additional queries per question) |
+| LLM inference | Groq API — Llama 3.3 70B / Qwen3 32B |
+| Frontend | Streamlit (5 tabs) |
+| Containerization | Docker + docker-compose |
 
 ---
 
 ## Project Structure
 
 ```
-├── app.py                  # Streamlit dashboard (entry point)
+├── app.py                    # Streamlit dashboard (entry point)
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
-├── .env.example            # API key template
+├── .env.example
 │
-├── src/                    # RAG pipeline source code
-│   ├── config.py           # Directory paths
-│   ├── loader.py           # PDF text extraction
-│   ├── cleaner.py          # OCR text cleaning
-│   ├── chunking.py         # Word-based chunking (150 words, 32 overlap)
-│   ├── embedder.py         # ChromaDB embedding (multilingual-e5-base)
-│   ├── build_bm25.py       # BM25 index builder
-│   ├── hybrid_search.py    # BM25 + embedding + RRF fusion
-│   ├── query_expansion.py  # LLM query expansion + multi-query search
-│   └── visualize.py        # Pipeline diagrams and t-SNE plots
+├── src/
+│   ├── config.py             # Directory path constants
+│   ├── loader.py             # PDF text extraction (pypdf)
+│   ├── cleaner.py            # OCR artifact removal (regex)
+│   ├── chunking.py           # Word-based chunking — 150 words, 32 overlap
+│   ├── embedder.py           # ChromaDB embedding with passage: prefix
+│   ├── build_bm25.py         # BM25 index builder
+│   ├── hybrid_search.py      # BM25 + embedding + RRF fusion
+│   ├── query_expansion.py    # LLM query expansion + multi-query merge
+│   └── visualize.py          # Pipeline diagrams and t-SNE plots
 │
-├── evaluation/             # Benchmarking and evaluation
-│   ├── benchmark.py        # Collect model answers for 18 questions
-│   ├── judge.py            # LLM-as-judge scoring
-│   ├── eval.py             # Retrieval quality evaluation
-│   └── questions.json      # 18 benchmark questions (easy/medium/hard)
+├── evaluation/
+│   ├── benchmark.py          # Collect model answers (18 questions × 3 models)
+│   ├── judge.py              # LLM-as-judge scoring
+│   ├── eval.py               # Retrieval quality test (4 known-answer queries)
+│   └── questions.json        # Benchmark questions with difficulty labels
 │
-├── results/                # Benchmark output (gitignored)
+├── results/                  # Generated output — gitignored
 │   ├── benchmark_results.json
 │   └── benchmark_scores.json
 │
-├── assets/                 # Visualization images (tracked in git)
-│   ├── pipeline_v1.png
-│   ├── pipeline_v2.png
-│   ├── tsne_v1.png
-│   ├── tsne_v2.png
+├── assets/                   # Visualization images — tracked in git
+│   ├── pipeline_v1.png / pipeline_v2.png
+│   ├── tsne_v1.png / tsne_v2.png
 │   └── retrieval.png
 │
-└── data/                   # Gitignored — raw PDFs + generated indexes
-    ├── raw/                # Source PDF books
-    ├── processed/          # Chunked dataset (dataset.json)
-    └── chroma/             # ChromaDB vector store + BM25 index
+└── data/                     # Gitignored — raw PDFs + generated indexes
+    ├── raw/                  # Source PDF books (not included)
+    ├── processed/            # dataset.json (chunked text)
+    └── chroma/               # ChromaDB vector store + bm25.pkl
 ```
 
 ---
 
-## Quickstart
+## Setup
 
-### 1. Clone and install
+### Prerequisites
+
+- Python 3.10+
+- [Groq API key](https://console.groq.com) (free tier available)
+- Source PDF books placed in `data/raw/`
+
+### Install
 
 ```bash
 git clone https://github.com/your-username/siyrat-rag.git
 cd siyrat-rag
+
 python -m venv venv
-source venv/bin/activate       # Windows: venv\Scripts\activate
+source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Set up your API key
+### Configure
 
 ```bash
 cp .env.example .env
-# Open .env and add your Groq API key
+# Edit .env and set your GROQ_API_KEY
 ```
 
-### 3. Add source PDFs
+### Build the pipeline
 
-Place your Uzbek Islamic book PDFs in `data/raw/`.
-
-### 4. Build the pipeline
+Run these steps once to prepare the data before launching the app:
 
 ```bash
-# Step 1: Chunk the PDFs
+# 1. Extract text from PDFs, clean OCR artifacts, and chunk into 150-word segments
 python src/chunking.py
 
-# Step 2: Embed chunks into ChromaDB
+# 2. Generate embeddings and store in ChromaDB
 python src/embedder.py
 
-# Step 3: Build the BM25 keyword index
+# 3. Build the BM25 keyword index
 python src/build_bm25.py
 ```
 
-### 5. Run the app
+### Run
 
 ```bash
 streamlit run app.py
+# Open http://localhost:8501
 ```
 
 ---
 
-## Docker
+## Dashboard Tabs
+
+| Tab | Description |
+|---|---|
+| 💬 Chat | Ask questions — hybrid search + query expansion + LLM answer with source |
+| 📊 Pipeline | V1 vs V2 pipeline diagrams side by side |
+| 🔵 Embedding Space | t-SNE visualization of the chunk embedding space |
+| 🔍 Retrieval | Interactive bar chart — enter any query to see top-5 RRF scores |
+| 🏆 Benchmark | LLM-as-judge results with per-model and per-difficulty breakdowns |
+
+---
+
+## Deployment (Railway)
+
+The vector index (`data/chroma/`) and processed dataset (`data/processed/`) are tracked in git — Railway reads the repo directly and builds the Docker image on their servers. **No local Docker installation needed.**
+
+### Step 1 — Push to GitHub
 
 ```bash
-# Build and run
-docker-compose up --build
-
-# App will be available at http://localhost:8501
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/your-username/siyrat-rag.git
+git push -u origin main
 ```
 
-> **Note:** Place your source PDFs in `data/raw/` and run the pipeline steps before building the Docker image, or mount the `data/` volume after running the pipeline locally.
+### Step 2 — Deploy on Railway
+
+1. Go to [railway.app](https://railway.app) → **New Project → Deploy from GitHub repo**
+2. Select your repository — Railway auto-detects the `Dockerfile`
+3. Go to **Variables** tab and add:
+   ```
+   GROQ_API_KEY = your_key_here
+   ```
+4. Click **Deploy** — Railway builds the image and starts the app
+5. Go to **Settings → Networking → Generate Domain** to get your public URL
+
+### Updating the deployment
+
+```bash
+git add .
+git commit -m "your change"
+git push
+# Railway auto-redeploys on every push to main
+```
 
 ---
 
-## RAG Pipeline
+## Running locally (without Docker)
 
-### V1 — Embedding Only
-```
-PDF → Loader → Cleaner → Chunker → Embedder → ChromaDB
-Query → Embed → Top-5 Chunks → Groq LLM → Answer
-```
+```bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
 
-### V2 — Hybrid Search + Query Expansion (current)
-```
-PDF → Loader → OCR Cleaner → Chunker → Embedder → ChromaDB
-                                      ↘ BM25 Index
+cp .env.example .env       # add your GROQ_API_KEY
 
-Query → Query Expansion (×3) → Hybrid Search (RRF) → Top-20 Chunks → Groq LLM → Answer + Source
+streamlit run app.py
+# → http://localhost:8501
 ```
 
-**Key design decisions:**
-- `passage:` / `query:` prefixes used with multilingual-e5-base as required by the model
-- RRF constant `k=60` balances dense and sparse retrieval rankings
-- Original query weighted `1.0`, expanded queries weighted `0.7` in multi-query merge
-- Chunks truncated at 600 characters when passed to LLM context to stay within token limits
+If you need to rebuild the index from new PDFs:
 
----
-
-## Benchmark Results
-
-Evaluated on 18 questions across three difficulty levels using LLM-as-judge scoring (1–5 scale).
-
-| Model | Overall | Easy | Medium | Hard |
-|---|---|---|---|---|
-| Llama 3.1 8B Instant | **3.80** | 4.33 | 3.72 | 3.33 |
-| Llama 4 Scout 17B | 3.74 | **4.39** | 3.67 | 3.17 |
-| Qwen3 32B | 2.28 | 1.00 | **3.45** | 2.39 |
-
-> Qwen3-32B scored low on easy questions due to excessive hallucination — it consistently added information from its training data rather than restricting itself to the retrieved context.
-
-![Benchmark](assets/pipeline_v2.png)
+```bash
+python src/chunking.py     # chunk PDFs → data/processed/dataset.json
+python src/embedder.py     # embed → data/chroma/
+python src/build_bm25.py   # keyword index → data/chroma/bm25.pkl
+```
 
 ---
 
 ## Evaluation
 
-Run the retrieval quality check against 4 known-answer questions:
+### Retrieval quality check
+
+Tests whether 4 known-answer questions retrieve the correct chunk in the top-20 results:
 
 ```bash
-python evaluation/eval.py "your experiment note"
+python evaluation/eval.py "experiment note"
+# Results appended to experiment_log.md
 ```
 
-Results are appended to `experiment_log.md`.
+### Run the full benchmark
+
+```bash
+# Step 1: Collect answers from all 3 models (saves to results/benchmark_results.json)
+python evaluation/benchmark.py
+
+# Step 2: Score answers with LLM-as-judge (saves to results/benchmark_scores.json)
+python evaluation/judge.py
+```
+
+### Regenerate visualizations
+
+```bash
+python src/visualize.py
+# Saves 5 images to assets/
+```
 
 ---
 
-## Source Books
+## Design Decisions
 
-The system was built using Uzbek-language Islamic biography books (Siyrat literature). Books are not included in this repository due to copyright.
+**Why `passage:` / `query:` prefixes?**
+`intfloat/multilingual-e5-base` uses asymmetric encoding — documents are encoded with `passage:` and queries with `query:`. Without the prefix, the model is used out of spec and retrieval quality degrades.
+
+**Why 150-word chunks with 32-word overlap?**
+Tested chunk sizes from 50 to 300 words. 150 words balances context richness (enough for an LLM to generate a meaningful answer) with retrieval precision (small enough to rank the right chunk highly).
+
+**Why BM25 + dense search instead of dense only?**
+Dense embeddings miss exact keyword matches for proper nouns (names, dates, places) common in biographical text. BM25 handles these well. RRF fusion captures the best of both without requiring score normalization.
+
+**Why query expansion?**
+Uzbek Islamic terminology has many synonyms and transliteration variants (e.g., "Rasululloh", "Payg'ambar", "Muhammad alayhissalom"). A single query may miss relevant chunks that use a different variant. Expansion generates 3 alternative phrasings, improving recall without hurting precision.
 
 ---
 

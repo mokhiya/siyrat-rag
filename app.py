@@ -92,7 +92,7 @@ QOIDALAR:
 5. Masalan, "qayerda o'sgan?" savoliga: emizgan ayol (sut ona), qabila, shahar — hammasi muhim.
 6. Agar MANBA da aniq javob bo'lmasa — "Bu haqida manbada ma'lumot yo'q" de.
 7. O'zingdan hech qanday qo'shimcha ma'lumot kiritma, taxmin ham qilma.
-8. Faqat MANBA dagi so'zlarni ishlatib javob ber — o'z bilimingdan foydalanma.
+8. Faqat MANBAdagi so'zlarni ishlatib javob ber — o'z bilimingdan foydalanma.
 9. Javobda qaysi kitobdan olganingni ko'rsat. Masalan: "Tarixi Muhammadiy ga ko'ra..."
 
 MANBA:
@@ -183,7 +183,7 @@ with tab3:
 # ─────────────────────────────────────────────────────────────────────────────
 with tab4:
     st.header("🔍 Retrieval natijalari")
-    st.caption("Berilgan savolga mos top-5 chunklar va ularning RRF score lari.")
+    st.caption("Berilgan savolga mos top-5 chunk va ularning RRF scorelari.")
 
     retrieval_query = st.text_input(
         "Savol kiriting:",

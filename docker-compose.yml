@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  rag-app:
+  app:
     build: .
     image: siyrat-rag:latest
     container_name: siyrat-rag
@@ -9,10 +9,4 @@ services:
       - "8501:8501"
     env_file:
       - .env
-    volumes:
-      # Persist ChromaDB and processed data between restarts
-      - ./db:/app/db
-      # Persist benchmark results
-      - ./benchmark_results.json:/app/benchmark_results.json
-      - ./benchmark_scores.json:/app/benchmark_scores.json
     restart: unless-stopped

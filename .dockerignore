@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Raw PDFs — large and not needed at runtime
+data/raw/
+
+# Environment file — pass secrets via docker-compose env_file or -e flag
+.env
+
+# Development artifacts
+.claude/
+experiment_log.md
+.DS_Store

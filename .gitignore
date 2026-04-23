@@ -7,11 +7,11 @@ __pycache__/
 # Environment variables
 .env
 
-# Data — raw PDFs and generated indexes (large, not for version control)
+# Raw PDFs — large source files, not for version control
 data/raw/
-data/processed/
-data/chroma/
-*.pkl
 
 # macOS
 .DS_Store
+
+# Claude Code
+.claude/
