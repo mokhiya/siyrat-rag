@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Data — raw PDFs and generated indexes (large, not for version control)
+data/raw/
+data/processed/
+data/chroma/
+*.pkl
+
+# macOS
+.DS_Store

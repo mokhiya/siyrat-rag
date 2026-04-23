@@ -1,0 +1,1134 @@
+{
+  "date": "2026-04-23T09:56:45.127922",
+  "models": [
+    "qwen/qwen3-32b",
+    "llama-3.1-8b-instant",
+    "meta-llama/llama-4-scout-17b-16e-instruct"
+  ],
+  "summary": {
+    "qwen/qwen3-32b": {
+      "overall_avg": 2.28,
+      "by_difficulty": {
+        "easy": 1.0,
+        "medium": 3.45,
+        "hard": 2.39
+      }
+    },
+    "llama-3.1-8b-instant": {
+      "overall_avg": 3.8,
+      "by_difficulty": {
+        "easy": 4.33,
+        "medium": 3.72,
+        "hard": 3.33
+      }
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "overall_avg": 3.74,
+      "by_difficulty": {
+        "easy": 4.39,
+        "medium": 3.67,
+        "hard": 3.17
+      }
+    }
+  },
+  "details": [
+    {
+      "id": 1,
+      "question": "Rasulullohning ismi nima edi?",
+      "difficulty": "easy",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "<think>\nOkay, let's tackle this question. The user is asking for the name of Rasululloh, which is a term used in Islam to refer to the Prophet Muhammad. The user provided several sources, all in Uzbek, which are different books about the life of Prophet Muhammad. The task is to answer based solely on the given sources.\n\nFirst, I need to check each source to see where the name of the prophet is mentioned. The user's question is straightforward, so the answer should be direct. Let's go through the sources one by one.\n\nLooking at the first source, [tarixi muhammadiy], it mentions \"Rasululloh\" and \"Muhammad\" in the same context. For example, it says, \"Payg‘ambarimiz sollallohu alayhi vasallam Hazrati Aliga: «Bu yozilmish narsa Alloh payg‘ambari Muhammadning Quraysh vakili Suhayl ibn Amr bilan qilgan sulhnomasidur» — dedilar.\" Here, \"Payg‘ambarimiz\" refers to the prophet, and it's stated as Muhammad. \n\nAnother source, [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari], starts with \"bir zot sizning xayr va sharafingizni rad etolmaydi. Biz albatta siz bilan qarindoshbo‘lishga rozimiz. Shundanso‘ng Rasululloh odamlarga yuzlandilar: – Ey jamoat, shohidbo‘lingki, men Muhammad ibn Abdulloh Hadicha binti Huvaylidnio‘z nikohimga oldim.\" This clearly states that Rasululloh's name is Muhammad ibn Abdulloh.\n\nThe source [Nurul-",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob beruvchi manbalarga sodiq qolgan va ulardan olingan ma'lumotlarga asoslangan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Javob faktik jihatdan to'g'ri, Rasulullohning ismi Muhammad ibn Abdulloh ekanligi aniq ko'rsatilgan."
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Savolga to'liq javob berilgan, Rasulullohning ismi va uning to'liq nomi keltirilgan."
+            }
+          },
+          "avg_score": 5.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Muhammad ibn Abdulloh (kitob: tarixi muhammadiy, sahifa: 1)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob beruvchi to'g'ri manbaga (tarixi muhammadiy, sahifa: 1) ishora qilgan va o'zidan qo'shmagan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Javob faktik jihatdan to'g'ri, Rasulullohning ismi Muhammad ibn Abdulloh."
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Javob savolga to'liq mos keladi va barcha kerakli ma'lumotlarni o'z ichiga oladi."
+            }
+          },
+          "avg_score": 5.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasulullohning ismi Muhammad ibn Abdulloh edi. (Manba: [tarixi muhammadiy])",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob to'g'ri manbadan olingan va qo'shimcha ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Javob faktlari to'g'ri va to'g'ri javobga mos keladi."
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Javob savolga to'liq va aniq javob beradi."
+            }
+          },
+          "avg_score": 5.0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "question": "Rasululloh qayerda tug'ilgan?",
+      "difficulty": "easy",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "XATO: Error code: 413 - {'error': {'message': 'Request too large for model `qwen/qwen3-32b` in organization `org_01kpgvcmf4ey9rfntc80vk5a83` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6008, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "judgment": {
+            "faithfulness": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "accuracy": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "completeness": {
+              "score": 0,
+              "reason": "API xatosi"
+            }
+          },
+          "avg_score": 0.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Makka shahrida tug‘ilgan. (Kitob: [tarixi muhammadiy], [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari])",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob beruvchi manbaga sodiq qolgan, qo'shimcha yoki o'z fikri qo'shmagan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Javob faktik jihatdan to'g'ri, Rasulullohning tug'ilgan joyi Makka shahri ekanligini ko'rsatadi."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Javob savolga deyarli to'liq berilgan, lekin joyning aniq nomi (Arabiston yarim oroli) qo'shilmagan."
+            }
+          },
+          "avg_score": 4.67
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasululloh (s.a.v.) milodning 570 yili Fil voqeasidan 50 kun avval adolatpesha Eron shohi No‘shirovon hukmronligining 40 yilida Rabiul avval oyining 12 kuni dushanba tongi otmasdan Shaab ibni Hoshimning xonadonida tug‘ilganlar. Onasining ismi Omina edi. (Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari)",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Manbaga sodiq, lekin ba'zi qo'shimcha tafsilotlar mavjud."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Ko'p faktlar to'g'ri, lekin ba'zi detallarda farq bor."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga qisman to'liq javob berilgan, lekin asosiy ma'lumot mavjud."
+            }
+          },
+          "avg_score": 3.67
+        }
+      }
+    },
+    {
+      "id": 3,
+      "question": "Rasululloh qaysi yili tug'ilgan?",
+      "difficulty": "easy",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "XATO: Error code: 413 - {'error': {'message': 'Request too large for model `qwen/qwen3-32b` in organization `org_01kpgvcmf4ey9rfntc80vk5a83` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6020, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "judgment": {
+            "faithfulness": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "accuracy": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "completeness": {
+              "score": 0,
+              "reason": "API xatosi"
+            }
+          },
+          "avg_score": 0.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Rasululloh 570 yili tug'ilgan. (Kitob: tarixi muhammadiy, sahifa: 303)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Manbaga sodiq, kitob sahifasi ko'rsatilgan."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Faktlar deyarli to'g'ri, lekin 'miloddan avvalgi' va 'Fil yilida' qismi etishmaydi."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga deyarli to'liq javob berilgan, lekin yilning davri va maxsus yil nomi (Fil yili) haqida ma'lumot berilmagan."
+            }
+          },
+          "avg_score": 4.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasululloh (s.a.v.) milodning 570 yili Fil voqeasidan 50 kun avval adolatpesha Eron shohi No‘shirovon hukmronligining 40 yilida Rabiul avval oyining 12 kuni dushanba tongi otmasdan Shaab ibni Hoshimning xonadonida tug‘ilganlar. Onasining ismi Omina edi. (Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari)",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Manbaga sodiq, lekin ba'zi qo'shimcha tafsilotlar mavjud"
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Faktlar asosan to'g'ri, lekin ba'zi tafsilotlarda farq bor"
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Savolga to'liq javob berilgan, qo'shimcha tafsilotlar bilan"
+            }
+          },
+          "avg_score": 4.33
+        }
+      }
+    },
+    {
+      "id": 4,
+      "question": "Rasulullohning otasining ismi nima edi?",
+      "difficulty": "easy",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "XATO: Error code: 413 - {'error': {'message': 'Request too large for model `qwen/qwen3-32b` in organization `org_01kpgvcmf4ey9rfntc80vk5a83` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6171, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "judgment": {
+            "faithfulness": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "accuracy": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "completeness": {
+              "score": 0,
+              "reason": "API xatosi"
+            }
+          },
+          "avg_score": 0.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Abdulmuttalib (kitob: [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari])",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob manbaga asoslangan, lekin to'liq emas. Kitob nomi va muallifi berilgan."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob to'g'ri, lekin to'liq emas. Abdulmuttalib Rasulullohning otasining ismi, lekin ibn Abd al-Muttalib qismi etishmaydi."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Javob to'liq emas. Savolga to'liq javob berilmagan, faqat otaning ismi berilgan, familiyasi va boshqa detallar berilmagan."
+            }
+          },
+          "avg_score": 3.33
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Abdulloh ibn Abdulmuttalib [Nurull-yaqin]",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot to'g'ri"
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, to'g'ri javobga mos keladi"
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Savolga deyarli to'liq javob berilgan, lekin qo'shimcha ma'lumot keraksiz"
+            }
+          },
+          "avg_score": 4.67
+        }
+      }
+    },
+    {
+      "id": 5,
+      "question": "Rasulullohning onasining ismi nima edi?",
+      "difficulty": "easy",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "XATO: Error code: 413 - {'error': {'message': 'Request too large for model `qwen/qwen3-32b` in organization `org_01kpgvcmf4ey9rfntc80vk5a83` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6076, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "judgment": {
+            "faithfulness": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "accuracy": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "completeness": {
+              "score": 0,
+              "reason": "API xatosi"
+            }
+          },
+          "avg_score": 0.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Omina (kitob: Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari).",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob faktlari to'g'ri, lekin to'liq emas (ismning oxirgi qismi 'bint Vahb' etishmadi)."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga qisman javob berilgan, ismning to'liq nomi berilmagan."
+            }
+          },
+          "avg_score": 4.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Omina. (Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Fakt to'g'ri, lekin to'liq emas. To'g'ri javob 'Omina bint Vahb' bo'lishi kerak edi."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob berilmagan, faqat ismning bir qismi berilgan."
+            }
+          },
+          "avg_score": 3.67
+        }
+      }
+    },
+    {
+      "id": 6,
+      "question": "Rasulullohning birinchi xotini kim edi?",
+      "difficulty": "easy",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "Ras",
+          "judgment": {
+            "faithfulness": {
+              "score": 1,
+              "reason": "Javob manbaga sodiq emas, hatto to'liq yozilmagan."
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "Faktlar noto'g'ri, to'g'ri javobga mos kelmaydi."
+            },
+            "completeness": {
+              "score": 1,
+              "reason": "Savolga to'liq javob berilmagan."
+            }
+          },
+          "avg_score": 1.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Hadicha binti Huvaylid (kitob: Nurul-yaqin)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, kitob: Nurul-yaqin deb qo'shib qo'ygan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, to'g'ri javobga mos keladi: Hadicha binti Huvaylid."
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Savolga to'liq javob berilgan, qo'shimcha ma'lumot ham berilgan."
+            }
+          },
+          "avg_score": 5.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasulullohning birinchi xotini Hadicha binti Huvaylid edi. (Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha yoki o'zgartirish kiritilmagan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, to'g'ri javobga mos keladi: Rasulullohning birinchi xotini Xadicha bint Xuvaylid ekanligi aniq."
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Savolga to'liq javob berilgan, hech qanday muhim ma'lumot qoldirilmagan."
+            }
+          },
+          "avg_score": 5.0
+        }
+      }
+    },
+    {
+      "id": 7,
+      "question": "Rasulullohni kim emizgan (sut onasi)?",
+      "difficulty": "medium",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "Rasulullohni emizgan sut onasi **Halima bint Abu Kabsha** bo'lib, u Banu Sa'd qabilasidan edi. U Quraysh xalqi tomonidan Muhammad alayhissalomga sut ona sifatida",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob asosan to'g'ri, lekin ismning bir qismi noto'g'ri: Halima bint Abu Kabsha o'rniga Halima Sa'diya deyilishi kerak edi."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob asosan to'g'ri, qabila nomi va sut ona haqidagi ma'lumot to'g'ri, lekin ismning bir qismi noto'g'ri."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Javob qisman to'liq, Rasulullohni emizgan sut onasi va uning qabilasi haqida to'g'ri ma'lumot bergan, lekin bolalik davri haqida qo'shimcha ma'lumot bermagan."
+            }
+          },
+          "avg_score": 3.67
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Halima (kitob: Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, kitob muallifi Shohista Kamol qizi nomi mos keladi."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob faktlari to'g'ri, lekin to'liq emas. Faqat 'Halima' deyilgan, qo'shimcha ism 'Sa'diya' berilmagan."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob berilmagan, Rasulullohni emizgan onasining to'liq ismi va u bilan bog'liq qo'shimcha ma'lumotlar berilmagan."
+            }
+          },
+          "avg_score": 3.67
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Halima. (Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob faktlari to'g'ri, lekin to'liq emas. Rasulullohni emizgan kishi nomi to'g'ri, ammo qo'shimcha ism (Sa'diya) va qabila (Banu Sa'd) haqida ma'lumot berilmagan."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob berilmagan, qo'shimcha ma'lumotlar (Sa'diya, Banu Sa'd qabilasi) yetishmaydi."
+            }
+          },
+          "avg_score": 3.67
+        }
+      }
+    },
+    {
+      "id": 8,
+      "question": "Rasulullohning asosiy amakisi kim edi va uni himoya qilgan?",
+      "difficulty": "medium",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "XATO: Error code: 413 - {'error': {'message': 'Request too large for model `qwen/qwen3-32b` in organization `org_01kpgvcmf4ey9rfntc80vk5a83` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6024, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "judgment": {
+            "faithfulness": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "accuracy": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "completeness": {
+              "score": 0,
+              "reason": "API xatosi"
+            }
+          },
+          "avg_score": 0.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Abu Tolib (kitob: tarixi muhammadiy)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, o'zidan qo'shilgan narsa yo'q."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, to'g'ri javobga mos keladi."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob bermagan, faqat ismini aytgan."
+            }
+          },
+          "avg_score": 4.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasulullohning asosiy amakisi Abu Tolib edi va u Rasulullohni himoya qilgan. (Manba: [tarixi muhammadiy])",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot kiritilmagan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, javob to'g'ri ma'lumotni o'z ichiga olgan."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Savolga deyarli to'liq javob berilgan, lekin 'butun umri davomida qo'llab-quvvatlagan' qismi etishmaydi."
+            }
+          },
+          "avg_score": 4.67
+        }
+      }
+    },
+    {
+      "id": 9,
+      "question": "Birinchi vahiy qayerda nozil bo'lgan?",
+      "difficulty": "medium",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "Birinchi vahiy **Hira grottosida** (Makkada) no",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, chunki 'Hira grottosida' va 'Hiro g'orida' bir ma'noni anglatadi."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, 'Hira grottosida' Makkadagi Hiro g'orini bildiradi."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Savolga deyarli to'liq javob berilgan, ammo joy nomi to'liq yozilmagan."
+            }
+          },
+          "avg_score": 4.67
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Guruhga yuzlangan payg‘ambar alayhis-salomning uyida, G‘arib qolgan uyida nozil bo‘lgan. Kitob: Tarixi Muhammadiy. Alixonto‘ra Sog‘uniy.",
+          "judgment": {
+            "faithfulness": {
+              "score": 2,
+              "reason": "Javob manbaga asoslangan, lekin manba noto'g'ri"
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "Fakt noto'g'ri, to'g'ri javob bilan mos kelmaydi"
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga javob berdi, lekin to'liq emas"
+            }
+          },
+          "avg_score": 2.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "G‘ayrida tog‘i(Makkada) Nurul-yaqin",
+          "judgment": {
+            "faithfulness": {
+              "score": 2,
+              "reason": "Javob manbaga to'liq sodiq emas, chunki tog' nomi noto'g'ri berilgan."
+            },
+            "accuracy": {
+              "score": 3,
+              "reason": "Faktlar qisman to'g'ri, lekin Makka yaqinidagi Hiro g'origa to'liq mos kelmaydi."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob berilmagan, chunki joy nomi to'liq aniqlanmagan."
+            }
+          },
+          "avg_score": 2.33
+        }
+      }
+    },
+    {
+      "id": 10,
+      "question": "Hijrat qaysi yili bo'lgan?",
+      "difficulty": "medium",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "Hijrat Payg‘ambarlik davrining o‘n uchinchi yilida bo‘lgan. Milodiy tarix bo‘yicha",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob manbaga sodiq, lekin qo'shimcha ma'lumot berilgan."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob faktlari to'g'ri, lekin to'g'ri javobga mos kelmaydi."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Javob savolga qisman javob beradi, lekin to'liq emas."
+            }
+          },
+          "avg_score": 3.67
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Hijrat 622-yili bo'lgan. (Kitob: tarixi muhammadiy, sahifa: 1)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga (tarixi muhammadiy, sahifa: 1) sodiq bo'lib, qo'shimcha yoki o'zgartirilgan ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Javob faktlari to'g'ri, ya'ni Hijrat 622-yilda bo'lganligi haqida to'g'ri ma'lumot berilgan."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Javob savolga deyarli to'liq javob beradi, ammo Hijratning qaerdan qaerga amalga oshirilganligi haqida qo'shimcha ma'lumot bermaydi."
+            }
+          },
+          "avg_score": 4.67
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Hijratningto‘qqizinchi yili zulqa’da oyining oxirida hajga boradiganlarga payg‘ambar alayhis-salom Abu Bakr Siddiqni boshliq etib tayinladilar. (Nurul-yaqin)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga (Nurul-yaqin) sodiq ko'rinadi, qo'shimcha yoki o'zgartirilgan ma'lumotlar yo'q."
+            },
+            "accuracy": {
+              "score": 2,
+              "reason": "Javob Hijrat yilini emas, balki Hijratning to'qqizinchi yilida boshqa voqea haqida gapiradi. Faktlar noto'g'ri, to'g'ri javobga mos kelmaydi."
+            },
+            "completeness": {
+              "score": 1,
+              "reason": "Javob savolga umuman to'liq javob bermaydi, Hijrat yilini aytmaydi."
+            }
+          },
+          "avg_score": 2.67
+        }
+      }
+    },
+    {
+      "id": 11,
+      "question": "Rasulullohning bobosining ismi nima edi?",
+      "difficulty": "medium",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "Rasulullohning bobosining ismi **Abdulmuttalib** edi.  \n\nManba: [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari]",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha yoki o'zgartirish kiritilmagan."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob faktlari to'g'ri, lekin ismning to'liq shakli (Abd al-Muttalib) berilmagan."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Javob to'liq emas, chunki unda 'ibn Hoshim' qismi tushurib qoldirilgan."
+            }
+          },
+          "avg_score": 4.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Abdulmuttalib (kitob: [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari])",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob faktlari to'g'ri, lekin to'liq emas (Abd al-Muttalib ibn Hoshim bo'lishi kerak edi)."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga qisman javob berilgan, to'liq ism berilmagan."
+            }
+          },
+          "avg_score": 4.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Abdulmuttalib. (Manba: [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari])",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Faktlar to'g'ri, lekin ismning to'liq shakli berilmagan."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga qisman javob berilgan, to'liq ism berilmagan."
+            }
+          },
+          "avg_score": 4.0
+        }
+      }
+    },
+    {
+      "id": 12,
+      "question": "Rasululloh Madinaga hijrat qilganda uni kim boshpana berdi?",
+      "difficulty": "medium",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "Rasululloh Madinaga hijrat qilganda uni **Abu Ayyub Ansoriy** boshpana berdi. Mazkur manbada aytilganidek:  \n\"Rasululloh sollallohu alayhi vasallam Makkadan Madinaga hijrat qilib kelganlarida Abu Ayyub Ansoriyning uyiga qo‘ngan edilar.\"  \n\n**Manba",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha yoki o'zidan biror narsa qo'shmagan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, to'g'ri javobga mos keladi. Ismlar va hodisalar aniq."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Savolga deyarli to'liq javob berilgan, lekin javobda bir oz kamchilik bor: 'Abu Ayyub al-Ansori' o'rniga 'Abu Ayyub Ansoriy' deb yozilgan."
+            }
+          },
+          "avg_score": 4.67
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Abu Ayyub Ansoriy (kitob: tarixi muhammadiy).",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob manbaga sodiq, lekin ismning yozilishi bir oz farq qiladi (Abu Ayyub al-Ansori -> Abu Ayyub Ansoriy)."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, javob to'g'ri ma'lumotni o'z ichiga oladi."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga javob berilgan, lekin qo'shimcha ma'lumotlar (o'z uyiga qabul qilib mezbonlik qilgan) keltirilmagan."
+            }
+          },
+          "avg_score": 4.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasululloh sollallohu alayhi vasallam Makkadan Madinaga hijrat qilib kelganlarida Abu Ayyub Ansoriyning uyiga qo‘ngan edilar. (tarixi muhammadiy)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, tarixi muhammadiy kitobidan olingan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, Rasululloh Madinaga hijrat qilganda Abu Ayyub al-Ansoriyni uyiga qo'nganligi haqida to'g'ri ma'lumot berilgan."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Savolga deyarli to'liq javob berilgan, lekin javobda Rasulullohni kim boshpana berganligi haqida to'liq ma'lumot berilmagan, faqat uyiga qo'nganligi haqida ma'lumot berilgan."
+            }
+          },
+          "avg_score": 4.67
+        }
+      }
+    },
+    {
+      "id": 13,
+      "question": "Rasulullohning farzandlarining ismlari nima edi?",
+      "difficulty": "hard",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "<think>\nOkay, let's tackle this question. The user is asking for the names of the Prophet Muhammad's children. I need to check the provided sources to find any mentions of his children's names.\n\nFirst, I'll go through each entry in the MANBA section. \n\nLooking at [tarixi muhammadiy]: There's a mention of Ibrohim and Qasim. It says, \"Rasulullohning Qosimdan keyin tug‘ilgan qizlari Zaynab edi.\" So Qasim is a son, and Zaynab is a daughter. Also, Ibrohim is mentioned as a son who passed away young.\n\nAnother entry in [tarixi muhammadiy] mentions \"Rasululloh: — Ering Mis’ab ibn Umayr ham shahidbo‘ldi. Unga ham ta’ziyat ayturman. Alloh senga sabr bersin,— deb edilar, ul xotun: «Vo vaylo va huzno» deb qattiq baqirib yig‘ladi.\" Not sure if this is relevant to children.\n\nIn [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari], it mentions Abdulloh, Zubayr, Anisa, Husama, and Shayma as the Prophet's half-siblings from his wet nurse Halima. But these are half-siblings, not children.\n\nAnother [tarixi muhammadiy] entry states: \"Rasulullohning axli Qurayshdan bo'lib, onasi Hazrat Khadija. Ular Qasim, Zaynab, Ruqayya, Umm Kulthum, Fatima, Ibrohim.\" Wait, this seems to list the children: Qasim, Zayn",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob manbalarga sodiq, lekin ba'zi qo'shimcha ma'lumotlar ham mavjud."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javobdagi faktlar asosan to'g'ri, lekin ba'zi nomlar to'liq yoki aniq emas."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Javob savolga deyarli to'liq javob beradi, lekin ba'zi nomlar yoki detallar etishmaydi."
+            }
+          },
+          "avg_score": 3.67
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Rasulullohning farzandlari Qasim, Abdullah, Zaynab, Ruqayya, Ummu Kulthum, Fatima va Abdurrahmon edi. (Kitob: tarixi muhammadiy, Alixonto’ra Sog’uniy, 246-267 sahifalar)",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Manbaga sodiq, lekin qo'shimcha ma'lumot bor"
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Faktlar deyarli to'g'ri, lekin bitta noto'g'ri ism bor"
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "Savolga deyarli to'liq javob berilgan, lekin bitta noto'g'ri ism bor"
+            }
+          },
+          "avg_score": 4.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasulullohning farzandlari: Qosim, Zaynab, Ruqayya, Ummu Kulsum, Ibrohim. \nManba: [tarixi muhammadiy]",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob tarixi muhammadiy manbasiga sodiq"
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Faktlar deyarli to'g'ri, lekin Abdulloh (Tohir) va Fotima nomi etishmayapti"
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob bermagan, ba'zi farzandlar nomi etishmayapti"
+            }
+          },
+          "avg_score": 3.67
+        }
+      }
+    },
+    {
+      "id": 14,
+      "question": "Rasululloh necha yoshida vafot etgan?",
+      "difficulty": "hard",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "<think>\nOkay, let's tackle this question. The user is asking how old Prophet Muhammad (PBUH) was when he passed away. I need to find the answer from the provided sources. Let me go through each source carefully.\n\nFirst, looking at [tarixi muhammadiy], there's a mention of Aisha bint Abu Bakr, who died in the 52nd year of Hijra. But that's about her, not the Prophet. Then in [Nurul-yaqin], there's a section about Imam Bukhari and others, but that's about their deaths. \n\nWait, in [Shohista Kamol qizi. Muhammad alayhissalomning bolaligi va yoshliklari], it says that Prophet Muhammad was born in 570 CE, and he passed away in 632 CE. Subtracting 570 from 632 gives 62 years old. But I need to check if any of the sources directly state his age at death. \n\nAnother part in [tarixi muhammadiy] mentions that after the conquest of Mecca, Abu Talib's son said something, but that's not relevant. In [Nurul-yaqin], under the section about Rasululloh's marriages, it says that after Khadija's death, he married Aisha, but again, no age mentioned. \n\nWait, the user's sources might not explicitly state the age. The birth year is given as 570 CE in Shohista Kamol's book, and if I know the death year is 632 CE, then 632 minus 570 is 62. But do any of the sources mention the death year? Let me check again. \n\nIn [tarixi muhammadiy], there's a part about the conquest of Mecca and the",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob berishda asosan manbalarga tayandi, lekin ba'zi qo'shimcha hisob-kitoblarni ham ishlatdi."
+            },
+            "accuracy": {
+              "score": 3,
+              "reason": "Rasulullohning vafot etgan yoshini 62 deb aniqladi, lekin to'g'ri javob 63 yosh edi."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Javobda Rasulullohning vafot etgan yili va yoshi haqida ma'lumot berdi, lekin to'liq va aniq emas."
+            }
+          },
+          "avg_score": 3.33
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Manbada ma'lumot yo'q.",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, hech qanday qo'shimcha yoki o'zgartirish kiritilmagan."
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "Javob faktik jihatdan noto'g'ri, chunki u to'g'ri javobni bermaydi."
+            },
+            "completeness": {
+              "score": 1,
+              "reason": "Javob savolga to'liq javob bermaydi, chunki u hech qanday ma'lumot keltirmaydi."
+            }
+          },
+          "avg_score": 2.33
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasululloh 51-hijriyda Makka yaqinidagi Sarif degan joyda sakson yoshda vafot topdi. (Manba: [tarixi muhammadiy])",
+          "judgment": {
+            "faithfulness": {
+              "score": 2,
+              "reason": "Manba ko'rsatilgan, lekin undan noto'g'ri ma'lumot olingan."
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "Javobdagi yosh (80) va vafot joyi (Sarif) noto'g'ri."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Javob qisman to'liq, lekin muhim detallar (hijriy yil, to'g'ri joy) noto'g'ri."
+            }
+          },
+          "avg_score": 2.0
+        }
+      }
+    },
+    {
+      "id": 15,
+      "question": "Islomga kirgan birinchi erkak kim edi?",
+      "difficulty": "hard",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "<think>\nOkay, let's tackle this question: \"Islomga kirgan birinxi erkak kim edi?\" which means \"Who was the first man to embrace Islam?\" \n\nFirst, I need to refer to the provided sources. The user specified that I should only use the given MANBA (source) texts. Let me scan through each entry to find relevant information.\n\nLooking at [tarixi muhammadiy] entries, there's mention of various companions converting to Islam. For example, in one entry, it says: \"Hazrati Abu Bakr Siddiq xalifalik davrlarida...\" but that's about Abu Bakr's caliphate, not his conversion. Another entry mentions \"Hazrati Umar ila amir Hamzaning Islomga musharrafbo‘lishlari ila Islom dini rivojlanishga boshladi.\" This indicates that Umar and Hamza embraced Islam, but they aren't the first.\n\nIn [Nurul-yaqin], there's a part that says: \"birinchi navbatko‘tarilgan bayroq shul edi.\" But that's about a flag, not the first convert. \n\nWait, another [tarixi muhammadiy] entry mentions: \"Birozo‘tirib, achchig‘i bosilgandin so‘ngra Mus’ab bir necha oyat Qur’ono‘qib, Alloh amrini unga anglatdi. Tavfiq yor bo‘lib, bu ham darhol iymon keltirdi.\" This talks about Mus'ab converting, but I don't think he's the first.\n\nLooking back, in [Nurul-yaqin], there's a section discussing the first migration (hijra) where it mentions \"Abu Bakr\" and others, but it's about migration",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob manbalarga asoslangan, lekin ba'zi qo'shimcha fikrlar mavjud."
+            },
+            "accuracy": {
+              "score": 3,
+              "reason": "Javob to'g'ri emas, chunki u Abu Bakr as-Siddiq va Ali ibn Abu Tolib haqida aniq ma'lumot keltirmaydi."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Javob savolga to'liq javob bermaydi, chunki u faqat ba'zi odamlarning Islomga kirishi haqida gapiradi."
+            }
+          },
+          "avg_score": 3.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Abu Bakr (kitob: tarixi muhammadiy)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob beruvchi manbaga sodiq qolgan, kitob: tarixi muhammadiy degan ma'lumot berilgan."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob to'g'ri, lekin to'liq emas. Islomga kirgan birinchi erkak Abu Bakr as-Siddiq ekanligi to'g'ri, lekin o'smirlar orasida Ali ibn Abu Tolib ekanligi aytilmagan."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob berilmagan, faqat kattalar orasida islomga kirgan birinchi erkak nomi aytilgan, o'smirlar haqida aytilmagan."
+            }
+          },
+          "avg_score": 3.67
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Abubakr Siddiq. (Manba: Nurul-yaqin)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, qo'shimcha ma'lumot yo'q."
+            },
+            "accuracy": {
+              "score": 4,
+              "reason": "Javob qisman to'g'ri, lekin to'liq emas. Abu Bakr as-Siddiq kattalar orasida birinchi bo'lgan, lekin o'smirlar orasida Ali ibn Abu Tolib birinchi bo'lganligi aytilmagan."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob berilmagan, chunki faqat kattalar orasidagi birinchi erkak haqida ma'lumot berilgan, o'smirlar haqida aytilmagan."
+            }
+          },
+          "avg_score": 3.67
+        }
+      }
+    },
+    {
+      "id": 16,
+      "question": "Rasulullohning eng yaqin sahobalari (to'rt xalifa) kimlar edi?",
+      "difficulty": "hard",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "XATO: Error code: 413 - {'error': {'message': 'Request too large for model `qwen/qwen3-32b` in organization `org_01kpgvcmf4ey9rfntc80vk5a83` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6042, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "judgment": {
+            "faithfulness": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "accuracy": {
+              "score": 0,
+              "reason": "API xatosi"
+            },
+            "completeness": {
+              "score": 0,
+              "reason": "API xatosi"
+            }
+          },
+          "avg_score": 0.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Abu Bakr Siddiq, Umar ibn Al-Kattob, Uthman ibn Affan va Ali ibn Abi Talib. (Kitob: Nurul-yaqin, sahifa: 15)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga (Nurul-yaqin, sahifa: 15) sodiq bo'lib, qo'shimcha yoki o'zgartirishlar kiritilmagan."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, javob to'g'ri javobga mos keladi. Faqat 'Umar ibn al-Xattob' 'Umar ibn Al-Kattob', 'Usmon ibn Affon' 'Uthman ibn Affan' va 'Ali ibn Abu Tolib' 'Ali ibn Abi Talib' shaklida yozilgan, lekin bu unchalik muhim emas."
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Savolga to'liq javob berilgan, barcha to'rt sahoba nomi to'g'ri keltirilgan."
+            }
+          },
+          "avg_score": 5.0
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Rasulullohning eng yaqin sahobalari va to'rt xalifa: \n1. Abu Bakr Siddiq \n2. Umar ibn Xattob \n3. Usmon ibn Affon \n4. Ali ibn Abu Tolib \n\nManba: [Nurull-yaqin], [Tarixi Muhammadiy]",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga to'liq sodiq, qo'shimcha yoki o'zgartirishlar yo'q."
+            },
+            "accuracy": {
+              "score": 5,
+              "reason": "Faktlar to'g'ri, to'g'ri javobga mos keladi, barcha ismlar va tartib to'g'ri."
+            },
+            "completeness": {
+              "score": 5,
+              "reason": "Savolga to'liq javob berilgan, barcha to'rt sahoba nomi to'g'ri keltirilgan."
+            }
+          },
+          "avg_score": 5.0
+        }
+      }
+    },
+    {
+      "id": 17,
+      "question": "Rasulullohning otasi vafot etganda merosga nima qolgan edi?",
+      "difficulty": "hard",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "<think>\nOkay, let's tackle this question. The user is asking what was left as inheritance when the Prophet Muhammad's father passed away. I need to check the provided sources to find any mention of this.\n\nFirst, I'll look through each of the listed sources. The main sources here are \"Tarixi Muhammadiy\" and \"Nurul-yaqin\". Let me scan through the excerpts given.\n\nIn \"Tarixi Muhammadiy\", there's a mention of the Prophet's father, Abdullah. One excerpt says: \"Omina qura ysh qabylasi Zuhra jamoasiga mansub Vahbning qizi edi; Abdullohning otasi Abdu lmuttalib quraysh qabilasiningmo‘tabar oqsoqollaridanbo‘lib, qabiladoshlariningbo shiga mushkul ish tushgandato‘g‘riyo‘lyo‘riqko‘rsatar, katta ishlarda odamlarha misha uning peshini tutishardi.\" This talks about Abdullah's lineage but doesn't mention anything about inheritance.\n\nAnother part in \"Nurul-yaqin\" discusses the Prophet's lineage and his father's status: \"ULUG’ NASAB Insonlarni Ollohning haq yo‘liga musha rraf etgan payg'ambarimizning otalari Abdulloh, onalari Omina edi. Omina qura ysh qabylasi Zuhra jamoasiga mansub Vahbning qizi edi; Abdullohning otasi Abdu lmuttalib quraysh qabilasiningmo‘tabar oqsoqollaridanbo‘lib...\" Again, this is about lineage and status, not inheritance.\n\nLooking through other sections of \"Tarixi Muhammadiy\" and \"",
+          "judgment": {
+            "faithfulness": {
+              "score": 2,
+              "reason": "Manbalarda to'g'ri javobga oid ma'lumot topilmadi, lekin o'zidan qo'shilmagan."
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "To'g'ri javob berilmagan, faktlar noto'g'ri."
+            },
+            "completeness": {
+              "score": 1,
+              "reason": "Savolga to'liq javob berilmagan."
+            }
+          },
+          "avg_score": 1.33
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Rasulullohning otasi vafot etganda merosga hech narsa qolmagan edi. (Kitob: tarixi muhammadiy, sahifa: 303)",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga (tarixi muhammadiy, sahifa 303) asoslangan."
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "Javob faktlari noto'g'ri, Rasulullohning otasi vafot etganda merosga beshtadan tuya, bir necha qo'y va Baraka ismli cho'ri qolgan edi."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Javob savolga to'liq javob bermagan, faqat merosga hech narsa qolmagan deb qisqacha aytib o'tgan."
+            }
+          },
+          "avg_score": 2.67
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Manbada ma'lumot yo'q",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, hech qanday qo'shimcha yoki o'zgartirish kiritilmagan."
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "Faktlar noto'g'ri, javob to'g'ri javobga mos kelmaydi. 'Manbada ma'lumot yo'q' degan javob noto'g'ri."
+            },
+            "completeness": {
+              "score": 1,
+              "reason": "Savolga to'liq javob berilmagan. Rasulullohning otasi vafot etganda merosga nima qolganligi haqida hech qanday ma'lumot berilmagan."
+            }
+          },
+          "avg_score": 2.33
+        }
+      }
+    },
+    {
+      "id": 18,
+      "question": "Rasululloh birinchi vahiyni olgandan so'ng xotiniga nima dedi va Xadicha qanday javob berdi?",
+      "difficulty": "hard",
+      "scores": {
+        "qwen/qwen3-32b": {
+          "answer": "<think>\nOkay, let's tackle this question. The user is asking what Prophet Muhammad said to his wife Khadija after receiving the first revelation and how Khadija responded. I need to check the provided sources to find the answer.\n\nFirst, I'll look through the given texts. The sources include \"Tarixi Muhammadiy\" and \"Nurul-yaqin\". The user specified to only use the provided sources and not any outside knowledge. \n\nLooking at the \"Tarixi Muhammadiy\" entries, there's a mention of Khadija's uncle Waraqah ibn Nawfal. In the first entry, it says: \"onamiz Xadicha amakisi Varaqa ibn Navfa...\" which translates to \"our mother Khadija's uncle Waraqah ibn Nawfal...\". This seems to be related to the early events of the Prophet's life. \n\nIn another part of \"Tarixi Muhammadiy\", there's a section where the Prophet is described as having a vision and feeling distressed. The text mentions: \"Rasululloh bilanko‘rishganlaridan keyin, ulardan hol so‘radilar. Anda raislari: — Yo Rasulalloh, bizning yurtimizga yomg‘ir yog‘may, bek qahatchilikbo‘ldi...\" but this seems to be about a different event related to a drought. \n\nWait, there's another part in \"Tarixi Muhammadiy\" where the Prophet's first revelation is mentioned. The text says: \"Yana bu voqeani aniqlash uchun onamiz Xadicha amakisi Varaqa ibn Navfa...\" which refers to verifying the event with Waraqah ibn Nawfal. However, the exact words the Prophet said to Khadija and her response aren't directly quoted",
+          "judgment": {
+            "faithfulness": {
+              "score": 4,
+              "reason": "Javob berishda faqat berilgan manbalardan foydalanilgan, lekin ba'zi detallarda o'zidan qo'shilmagan."
+            },
+            "accuracy": {
+              "score": 3,
+              "reason": "Javobda faktlar qisman to'g'ri, lekin to'liq va aniq emas. Masalan, Rasulullohning Xadichaga aytgan so'zlari va Xadichaning javobi to'g'ri keltirilmagan."
+            },
+            "completeness": {
+              "score": 2,
+              "reason": "Savolga to'liq javob berilmagan, chunki Rasulullohning Xadichaga aytgan so'zlari ('Meni o'rang!') va Xadichaning javobi to'g'ri keltirilmagan, faqat voqeaga oid umumiy ma'lumotlar berilgan."
+            }
+          },
+          "avg_score": 3.0
+        },
+        "llama-3.1-8b-instant": {
+          "answer": "Javob: Rasululloh birinchi vahiyni olgandan so'ng xotiniga: \"Men Allohga shafe' bo'lsam yarashur\" dedi. Xadicha: \"Subhonalloh, sening bu so'zing qanday bo'ldi?\" deb javob berdi. (Tarixi Muhammadiy, 303-bet)",
+          "judgment": {
+            "faithfulness": {
+              "score": 2,
+              "reason": "Manbaga qisman sodiq, lekin ba'zi detallarda farq bor."
+            },
+            "accuracy": {
+              "score": 2,
+              "reason": "Faktlar qisman to'g'ri, lekin to'liq javobga mos kelmaydi."
+            },
+            "completeness": {
+              "score": 3,
+              "reason": "Savolga qisman javob berdi, lekin ba'zi muhim detallar etishmaydi."
+            }
+          },
+          "avg_score": 2.33
+        },
+        "meta-llama/llama-4-scout-17b-16e-instruct": {
+          "answer": "Manbada ma'lumot yo'q",
+          "judgment": {
+            "faithfulness": {
+              "score": 5,
+              "reason": "Javob manbaga sodiq, hech qanday qo'shimcha yoki o'zgartirish kiritilmagan."
+            },
+            "accuracy": {
+              "score": 1,
+              "reason": "Faktlar noto'g'ri, javob berilmagan, 'Manbada ma'lumot yo'q' deyilgan."
+            },
+            "completeness": {
+              "score": 1,
+              "reason": "Savolga to'liq javob berilmagan, hatto javob mavjud emas."
+            }
+          },
+          "avg_score": 2.33
+        }
+      }
+    }
+  ]
+}

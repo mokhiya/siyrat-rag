@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "question": "Rasulullohning ismi nima edi?",
+    "expected_answer": "Rasulullohning ismi Muhammad ibn Abdulloh edi.",
+    "keywords": ["Muhammad", "Abdulloh"],
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "question": "Rasululloh qayerda tug'ilgan?",
+    "expected_answer": "Rasululloh Arabiston yarim orolining Makka shahrida tug'ilgan.",
+    "keywords": ["Makka"],
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "question": "Rasululloh qaysi yili tug'ilgan?",
+    "expected_answer": "Rasululloh miloddan avvalgi 570-yilda, Fil yilida tug'ilgan.",
+    "keywords": ["570", "Fil"],
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "question": "Rasulullohning otasining ismi nima edi?",
+    "expected_answer": "Rasulullohning otasining ismi Abdulloh ibn Abd al-Muttalib edi.",
+    "keywords": ["Abdulloh", "Abd al-Muttalib"],
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "question": "Rasulullohning onasining ismi nima edi?",
+    "expected_answer": "Rasulullohning onasining ismi Omina bint Vahb edi.",
+    "keywords": ["Omina", "Vahb"],
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "question": "Rasulullohning birinchi xotini kim edi?",
+    "expected_answer": "Rasulullohning birinchi xotini Xadicha bint Xuvaylid edi.",
+    "keywords": ["Xadicha", "Xuvaylid"],
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "question": "Rasulullohni kim emizgan (sut onasi)?",
+    "expected_answer": "Rasulullohni Halima Sa'diya emizgan va u bolalikning bir qismini Banu Sa'd qabilasida o'tkazgan.",
+    "keywords": ["Halima", "Sa'diya"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "question": "Rasulullohning asosiy amakisi kim edi va uni himoya qilgan?",
+    "expected_answer": "Rasulullohning amakisi Abu Tolib uni himoya qilib, butun umri davomida qo'llab-quvvatlagan.",
+    "keywords": ["Abu Tolib"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 9,
+    "question": "Birinchi vahiy qayerda nozil bo'lgan?",
+    "expected_answer": "Birinchi vahiy Makka yaqinidagi Hiro g'orida nozil bo'lgan.",
+    "keywords": ["Hiro", "g'or"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 10,
+    "question": "Hijrat qaysi yili bo'lgan?",
+    "expected_answer": "Hijrat milodiy 622-yilda Makkadan Madinaga amalga oshirilgan.",
+    "keywords": ["622", "Madina"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 11,
+    "question": "Rasulullohning bobosining ismi nima edi?",
+    "expected_answer": "Rasulullohning bobosining ismi Abd al-Muttalib ibn Hoshim edi.",
+    "keywords": ["Abd al-Muttalib", "Hoshim"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 12,
+    "question": "Rasululloh Madinaga hijrat qilganda uni kim boshpana berdi?",
+    "expected_answer": "Rasululloh Madinaga kelganida Abu Ayyub al-Ansori uni o'z uyiga qabul qilib mezbonlik qilgan.",
+    "keywords": ["Abu Ayyub", "Ansori"],
+    "difficulty": "medium"
+  },
+  {
+    "id": 13,
+    "question": "Rasulullohning farzandlarining ismlari nima edi?",
+    "expected_answer": "Rasulullohning farzandlari: o'g'illari Qosim, Abdulloh (Tohir), Ibrohim; qizlari Zaynab, Ruqayya, Ummu Kulsum va Fotima edi.",
+    "keywords": ["Qosim", "Fotima", "Ibrohim", "Zaynab"],
+    "difficulty": "hard"
+  },
+  {
+    "id": 14,
+    "question": "Rasululloh necha yoshida vafot etgan?",
+    "expected_answer": "Rasululloh 63 yoshida, milodiy 632-yilda Madinada vafot etgan.",
+    "keywords": ["63", "632"],
+    "difficulty": "hard"
+  },
+  {
+    "id": 15,
+    "question": "Islomga kirgan birinchi erkak kim edi?",
+    "expected_answer": "Islomga kirgan birinchi erkak kattalar orasida Abu Bakr as-Siddiq, o'smirlar orasida esa Ali ibn Abu Tolib edi.",
+    "keywords": ["Abu Bakr", "Ali"],
+    "difficulty": "hard"
+  },
+  {
+    "id": 16,
+    "question": "Rasulullohning eng yaqin sahobalari (to'rt xalifa) kimlar edi?",
+    "expected_answer": "Rasulullohning to'rt yaqin sahobasi va keyinchalik xalifalari Abu Bakr as-Siddiq, Umar ibn al-Xattob, Usmon ibn Affon va Ali ibn Abu Tolib edilar.",
+    "keywords": ["Abu Bakr", "Umar", "Usmon", "Ali"],
+    "difficulty": "hard"
+  },
+  {
+    "id": 17,
+    "question": "Rasulullohning otasi vafot etganda merosga nima qolgan edi?",
+    "expected_answer": "Rasulullohning otasi Abdulloh vafot etganda merosga beshtadan tuya, bir necha qo'y va Baraka ismli cho'ri (Ummu Ayman) qolgan edi.",
+    "keywords": ["tuya", "Baraka", "Ummu Ayman"],
+    "difficulty": "hard"
+  },
+  {
+    "id": 18,
+    "question": "Rasululloh birinchi vahiyni olgandan so'ng xotiniga nima dedi va Xadicha qanday javob berdi?",
+    "expected_answer": "Rasululloh vahiydan keyin qo'rqib, 'Meni o'rang!' deb xotiniga kelgan. Xadicha uni tasalli berib, Varaqa ibn Navfal oldiga olib borgan va u Muhammad (s.a.v.) haqiqatan ham payg'ambar ekanligini tasdiqlagan.",
+    "keywords": ["Xadicha", "Varaqa", "vahiy"],
+    "difficulty": "hard"
+  }
+]
