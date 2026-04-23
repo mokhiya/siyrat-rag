@@ -8,6 +8,5 @@ matplotlib==3.10.8
 seaborn==0.13.2
 scikit-learn==1.8.0
 numpy==2.4.4
-torch==2.11.0
 transformers==5.5.4
 huggingface_hub==1.11.0
