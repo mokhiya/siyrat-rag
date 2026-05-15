@@ -1,3 +1,13 @@
+---
+title: Siyrat RAG
+emoji: 📖
+colorFrom: green
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Siyrat RAG
 
 A Retrieval-Augmented Generation (RAG) system for answering questions about the life of Prophet Muhammad ﷺ, built on Uzbek-language Islamic source texts.
